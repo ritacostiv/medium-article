@@ -1,32 +1,49 @@
-/* Fancy Links - Medium style */
+/* Base styles */
+body {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Container styles */
+.container {  /* Changed from #container to .container */
+  max-width: 680px;
+  margin: 50px auto;
+  padding: 0 24px;
+}
+
+/* Link styles */
 a {
   color: #333;
   text-decoration: none;
-  /* Gradient underline that starts invisible */
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.84) 0%,
     rgba(0, 0, 0, 0.84) 100%
   );
-  background-size: 0 2px;  /* Start with 0 width */
-  background-position: 0 100%;  /* Position at bottom */
+  background-size: 0 2px;
+  background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.25s ease-in-out;
 }
 
 a:hover {
-  /* Expand the background size on hover */
   background-size: 100% 2px;
 }
 
-/* Container - Medium style */
-.container {
-  max-width: 680px;  /* Medium's typical content width */
-  margin: 50px auto;
-  padding: 0 24px;
+/* Typography */
+h2 {
+  font-size: 24px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
-/* Responsive container */
+p {
+  margin-bottom: 24px;
+}
+
+/* Responsive design */
 @media (max-width: 728px) {
   .container {
     margin: 30px auto;

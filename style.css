@@ -1,0 +1,42 @@
+/* Fancy Links - Medium style */
+a {
+  color: #333;
+  text-decoration: none;
+  /* Gradient underline that starts invisible */
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.84) 0%,
+    rgba(0, 0, 0, 0.84) 100%
+  );
+  background-size: 0 2px;  /* Start with 0 width */
+  background-position: 0 100%;  /* Position at bottom */
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease-in-out;
+}
+
+a:hover {
+  /* Expand the background size on hover */
+  background-size: 100% 2px;
+}
+
+/* Container - Medium style */
+.container {
+  max-width: 680px;  /* Medium's typical content width */
+  margin: 50px auto;
+  padding: 0 24px;
+}
+
+/* Responsive container */
+@media (max-width: 728px) {
+  .container {
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+}
